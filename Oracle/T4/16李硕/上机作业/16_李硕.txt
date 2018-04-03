@@ -1,0 +1,100 @@
+SQL> select ceil(3.14) from dual;
+
+CEIL(3.14)                                                                      
+----------                                                                      
+         4                                                                      
+
+SQL> select floor(3.14) from dual;
+
+FLOOR(3.14)                                                                     
+-----------                                                                     
+          3                                                                     
+
+SQL> select round(3.1415926,3) from dual;
+
+ROUND(3.1415926,3)                                                              
+------------------                                                              
+             3.142                                                              
+
+SQL> select mod(10,3) from dual;
+
+ MOD(10,3)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select power(1,10) from dual;
+
+POWER(1,10)                                                                     
+-----------                                                                     
+          1                                                                     
+
+SQL> select length('hello') from dual;
+
+LENGTH('HELLO')                                                                 
+---------------                                                                 
+              5                                                                 
+
+SQL> select upper('hello') from dual;
+
+UPPER('HEL                                                                      
+----------                                                                      
+HELLO                                                                           
+
+SQL> select translate('jack','j','b') from dual;
+
+TRANSLAT                                                                        
+--------                                                                        
+back                                                                            
+
+SQL> select replace('jack','j','bl') from dual;
+
+REPLACE('J                                                                      
+----------                                                                      
+black                                                                           
+
+SQL> select instr('hello','e') from dual;
+
+INSTR('HELLO','E')                                                              
+------------------                                                              
+                 2                                                              
+
+SQL> select sysdate from dual;
+
+SYSDATE                                                                         
+--------------                                                                  
+16-3月 -18                                                                      
+
+SQL> select months_between(sysdate,to_date('2018-3-17','yyyy-mm--dd')) from dual;
+
+MONTHS_BETWEEN(SYSDATE,TO_DATE('2018-3-17','YYYY-MM--DD'))                      
+----------------------------------------------------------                      
+                                                -.01051673                      
+
+SQL> select add_months(sysdate,6) from dual;
+
+ADD_MONTHS(SYS                                                                  
+--------------                                                                  
+16-9月 -18                                                                      
+
+SQL> selct last_day(sysdate) from dual;
+SP2-0734: 未知的命令开头 "selct last..." - 忽略了剩余的行。
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(SYSDA                                                                  
+--------------                                                                  
+31-3月 -18                                                                      
+
+SQL> 
+SQL> select to_char(sysdate,'yyyy-mm-dd dy am hh:mi:ss') from dual;
+
+TO_CHAR(SYSDATE,'YYYY-MM-DDDYAMHH:MI:SS')                                       
+------------------------------------------------------------------------------  
+2018-03-16 星期五 下午 04:14:12                                                 
+
+SQL> select to_char(sysdate,'yyyy-mon-dd') from dual;
+
+TO_CHAR(SYSDATE,'YYYY-MON-DD')                                                  
+--------------------------------                                                
+2018-3月 -16                                                                    
+
+SQL> spool off;
